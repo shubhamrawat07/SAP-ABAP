@@ -1,1 +1,7 @@
 To comment use * in start of line.
+
+Important Notes:
+
+The * character must be at the beginning of the line for full-line comments.
+
+The " character can be used anywhere in a line to start a comment.
