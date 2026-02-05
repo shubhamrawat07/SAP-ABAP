@@ -1,0 +1,29 @@
+REPORT z_practice_01.
+
+DATA gv_a TYPE i.
+DATA gv_b TYPE i.
+DATA gv_sum TYPE i.
+
+gv_a = 10.
+gv_b = 20.
+
+gv_sum = gv_a + gv_b.
+
+WRITE: 'Sum is:', gv_sum.
+
+
+
+To take input use parameters
+
+REPORT z_input_sum.
+
+PARAMETERS: p_a TYPE i,
+            p_b TYPE i.
+
+DATA gv_sum TYPE i.
+
+START-OF-SELECTION.
+
+  gv_sum = p_a + p_b.
+
+  WRITE: / 'Sum is:', gv_sum.
