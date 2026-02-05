@@ -1,0 +1,15 @@
+REPORT z_practice_07.
+
+DATA gt_flights TYPE STANDARD TABLE OF sflight.
+DATA gs_flight TYPE sflight.
+
+SELECT *
+  FROM sflight
+  INTO TABLE gt_flights
+  UP TO 5 ROWS.
+
+LOOP AT gt_flights INTO gs_flight.
+  WRITE: / gs_flight-carrid,
+           gs_flight-connid,
+           gs_flight-price.
+ENDLOOP.
