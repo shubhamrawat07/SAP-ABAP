@@ -1,0 +1,35 @@
+IF LOOP
+
+REPORT z_practice_03.
+
+DATA gv_marks TYPE i VALUE 75.
+
+IF gv_marks >= 50.
+  WRITE 'PASS'.
+ELSE.
+  WRITE 'FAIL'.
+ENDIF.
+
+
+DO LOOP
+
+REPORT z_practice_04.
+
+DATA gv_counter TYPE i.
+
+DO 5 TIMES.
+  gv_counter = gv_counter + 1.
+  WRITE: / 'Counter:', gv_counter.
+ENDDO.
+
+
+WHILE LOOP
+
+REPORT z_practice_05.
+
+DATA gv_num TYPE i VALUE 1.
+
+WHILE gv_num <= 5.
+  WRITE: / gv_num.
+  gv_num = gv_num + 1.
+ENDWHILE.
