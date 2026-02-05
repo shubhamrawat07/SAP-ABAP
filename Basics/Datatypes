@@ -1,0 +1,113 @@
+Declare Variable 
+DATA <varianble_name> TYPE <data_type>.  
+
+
+Types of Datatypes
+
+1.  Integers
+
+-> i for integer    whole number.
+DATA gv_count TYPE i.
+gv_count = 10.
+
+-> p for decimal    used for money.
+DATA gv_price TYPE p DECIMALS 2.
+gv_price = '123.45'.
+
+-> f for float    used for scientific
+DATA gv_ratio TYPE f.
+gv_ratio = 3.14.
+
+
+2.  Character/ Text
+
+-> c for fixed length    length is fixed
+DATA gv_code TYPE c LENGTH 3.
+gv_code = 'ABC'.
+
+->string for flexible length    Flexible length (MOST USED).
+DATA gv_name TYPE string.
+gv_name = 'Shubham'.
+
+
+3.  Date & Time
+
+-> d for date    Format: YYYYMMDD
+DATA gv_date TYPE d.
+gv_date = sy-datum.
+
+-> t for time Format: HHMMSS
+DATA gv_time TYPE t.
+gv_time = sy-uzeit.
+
+
+4.  Boolean (True / False)
+
+ABAP does NOT have true/false type 
+We use abap_bool.
+Values:
+abap_true
+abap_false
+
+DATA gv_flag TYPE abap_bool.
+gv_flag = abap_true.
+
+
+5.  Structure (one row)
+A structure = group of different fields.
+
+Use SAP table structure
+DATA gs_flight TYPE sflight.
+
+Now it has many fields:
+gs_flight-carrid = 'LH'.
+
+
+6️. Internal Table (many rows)
+Table in memory.
+
+DATA gt_flights TYPE STANDARD TABLE OF sflight.
+
+Types:
+STANDARD (default)
+SORTED
+HASHED
+
+
+7️. Reference types (advanced, just awareness)
+Used for OOP.
+DATA lo_obj TYPE REF TO object.
+
+
+8️. Important system variables (already exist)
+SAP gives you some variables automatically.
+
+Variable	Meaning
+sy-datum	Today’s date
+sy-uzeit	Current time
+sy-subrc	Result code
+sy-uname	User name
+
+Example:
+WRITE sy-uname.
+
+
+9️. Most common beginner mistake ❌
+
+❌ Using i for money
+DATA price TYPE i.   "WRONG
+✅ Correct
+DATA price TYPE p DECIMALS 2.
+
+
+10️. Quick cheat sheet (SAVE THIS)
+Type	Use
+i	Counter, index
+p	Price, amount
+string	Text
+c	Fixed codes
+d	Date
+t	Time
+abap_bool	Yes / No
+Structure	One row
+Internal table	Many rows
