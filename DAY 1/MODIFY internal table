@@ -1,0 +1,15 @@
+REPORT z_practice_09.
+
+DATA gt_numbers TYPE STANDARD TABLE OF i.
+DATA gv_num TYPE i.
+
+APPEND 10 TO gt_numbers.
+APPEND 20 TO gt_numbers.
+
+READ TABLE gt_numbers INTO gv_num INDEX 1.
+gv_num = gv_num * 2.
+MODIFY gt_numbers FROM gv_num INDEX 1.
+
+LOOP AT gt_numbers INTO gv_num.
+  WRITE: / gv_num.
+ENDLOOP.
