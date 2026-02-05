@@ -1,0 +1,22 @@
+Prefix	Meaning
+gv_	Global variable
+lv_	Local variable
+gs_	Global structure (one row)
+ls_	Local structure
+gt_	Global internal table
+lt_	Local internal table
+
+
+Why ABAP especially cares about this
+
+In real projects:
+Programs are thousands of lines
+Many people touch the same code
+You debug code written 10 years ago
+Good naming = faster understanding = fewer mistakes
+
+Common Prefix
+
+p_	Single input parameter
+s_	Select-options (range input)
+pa_	Parameter (some teams use this)
