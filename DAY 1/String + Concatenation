@@ -1,0 +1,9 @@
+REPORT z_practice_02.
+
+DATA gv_first TYPE string VALUE 'Hello'.
+DATA gv_second TYPE string VALUE 'ABAP'.
+DATA gv_result TYPE string.
+
+CONCATENATE gv_first gv_second INTO gv_result SEPARATED BY space.
+
+WRITE gv_result.
