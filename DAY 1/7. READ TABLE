@@ -6,7 +6,7 @@ DATA gv_num TYPE i.
 APPEND 100 TO gt_numbers.
 APPEND 200 TO gt_numbers.
 
-READ TABLE gt_numbers INTO gv_num INDEX 2.
+READ TABLE gt_numbers INTO gv_num INDEX 2.            (index just for sy-subrc)
 
 IF sy-subrc = 0.
   WRITE: / 'Found:', gv_num.
