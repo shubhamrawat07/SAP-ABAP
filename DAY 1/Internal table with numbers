@@ -1,0 +1,12 @@
+REPORT z_practice_06.
+
+DATA gt_numbers TYPE STANDARD TABLE OF i.
+DATA gv_num TYPE i.
+
+APPEND 10 TO gt_numbers.
+APPEND 20 TO gt_numbers.
+APPEND 30 TO gt_numbers.
+
+LOOP AT gt_numbers INTO gv_num.
+  WRITE: / gv_num.
+ENDLOOP.
