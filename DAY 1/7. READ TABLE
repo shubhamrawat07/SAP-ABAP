@@ -10,4 +10,6 @@ READ TABLE gt_numbers INTO gv_num INDEX 2.
 
 IF sy-subrc = 0.
   WRITE: / 'Found:', gv_num.
+ELSE.
+  WRITE:/ 'Not Found'.                        (only for index 2+ will be invalid as only till index 2 data is present)
 ENDIF.
