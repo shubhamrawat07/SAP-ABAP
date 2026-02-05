@@ -1,0 +1,14 @@
+To take input use parameters
+
+REPORT z_input_sum.
+
+PARAMETERS: p_a TYPE i,
+            p_b TYPE i.
+
+DATA gv_sum TYPE i.
+
+START-OF-SELECTION.
+
+  gv_sum = p_a + p_b.
+
+  WRITE: / 'Sum is:', gv_sum.
